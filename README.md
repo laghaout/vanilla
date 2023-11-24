@@ -3,5 +3,6 @@
 
 
 
-1.  \`pre-commit run &#x2013;all-files\`
+1.  `pre-commit run --all-files`
+2.  
 
