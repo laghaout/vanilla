@@ -34,6 +34,4 @@ RUN pip3 install pre-commit
 RUN pip3 install protobuf==3.20.*
 
 # Install the local package.
-COPY Dockerfile *.yml README.* .env ./
-COPY repo/ repo
-COPY tests/ tests
+COPY . .
