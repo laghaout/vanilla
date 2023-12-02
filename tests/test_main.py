@@ -5,7 +5,7 @@ Created on Sat Dec  2 00:04:37 2023
 @author: Amine Laghaout
 """
 
-import repo.main as main
+import myrepo.main as main
 
 def test_add() -> None:
     result = main.add(number1=1, number2=-4)

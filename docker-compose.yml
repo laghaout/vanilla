@@ -1,6 +1,6 @@
 version: '0'
 services:
-  vanilla:
+  myservice:
     build:
       context: .
       dockerfile: Dockerfile
@@ -9,8 +9,12 @@ services:
     working_dir: /home/
     tty: true
     stdin_open: true
+#    volumes:
+#      - $DIR_LOC:$DIR_REM
     logging:
       driver: "json-file"
       options:
         max-size: "200k"
         max-file: "10"
+
+# git status before pre-commit
