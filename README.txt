@@ -1,11 +1,19 @@
-#+TITLE: Generic development environment
+#+TITLE: Template for Dockerized FastAPI
 
-This environment allows one to
-1. organize the code into a folder [[./myrepo/][=myrepo/=]] and its corresponding test folder [[./tests/][=tests/=]],
-2. dockerize as image =myimage= and service =myservice= with [[https://docs.docker.com/compose/][=Docker Compose=]],
-3. test Python code with [[https://docs.pytest.org][=pytest=]], 
-4. run pre-commit checks with [[https://pre-commit.com/][=pre-commit=]], and
-5. package Python code as =mypackage= with [[https://python-poetry.org][=Poetry=]].
-
-
-
+* Build
+#+BEGIN_SRC bash
+docker build -t app
+#+END_SRC 
+* Launch
+#+BEGIN_SRC bash
+docker run -p 8000:8000 app
+#+END_SRC bash
+* Query
+** =curl=
+#+BEGIN_SRC bash
+curl -X POST http://localhost:8000/yob \
+     -H "Content-Type: application/json" \
+     -d '{"age": 40}'
+#+END_SRC bash
+** Docs
+=http://localhost:8000/docs=
